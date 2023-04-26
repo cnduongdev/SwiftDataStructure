@@ -24,7 +24,7 @@ s.source = { :git => "https://github.com/cnduongdev/SwiftDataStructure.git",
              :tag => "#{s.version}" }
 
 # 7
-s.source_files  = "Classes", "Classes/**/*.{h,m}"
+s.source_files = "SwiftDataStructure/**/*.{swift}"
 
 # 8
 s.swift_version = "5.0"
