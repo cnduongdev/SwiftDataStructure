@@ -126,6 +126,20 @@ extension LinkedList {
         }
         return node.next?.value
     }
+    
+    public mutating func reverse() {
+        guard !isEmpty else { return }
+        var current = head
+        var prev: Node<T>? = nil
+        while current != nil {
+            var next = current?.next
+            current?.next = prev
+            prev = current
+            current = next
+        }
+        tail = Node(value: head!.value, next: nil)
+        head = prev
+    }
 }
 
 extension LinkedList: Collection {
